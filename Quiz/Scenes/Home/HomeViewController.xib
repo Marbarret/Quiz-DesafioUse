@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="Quiz" customModuleProvider="target">
+            <connections>
+                <outlet property="backgroudView" destination="kWg-Qg-S0e" id="oAu-Bc-rrY"/>
+                <outlet property="buttonStart" destination="zJ5-uX-7e4" id="LzB-DX-rR7"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kWg-Qg-S0e">
+                    <rect key="frame" x="20" y="348" width="374" height="200"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Perguntas e Respostas" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vrJ-vE-wkl">
+                            <rect key="frame" x="15" y="20" width="344" height="21"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                            <color key="textColor" red="0.1215686275" green="0.23137254900000001" blue="0.30196078430000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zJ5-uX-7e4">
+                            <rect key="frame" x="15" y="140" width="344" height="50"/>
+                            <color key="backgroundColor" red="0.1215686275" green="0.23137254900000001" blue="0.30196078430000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="sC0-NN-qf9"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                            <state key="normal" title="Iniciar">
+                                <color key="titleColor" red="0.79215686269999996" green="1" blue="0.98431372549999996" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="handlerButtonStart:" destination="-1" eventType="touchUpInside" id="q9D-Pd-hce"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Responda 10 perguntas e descubra sua pontuacao no final!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DQz-xm-eJc">
+                            <rect key="frame" x="15" y="51" width="344" height="50"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="p6d-xS-jFd"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" red="0.86113081676332492" green="0.88923424123170391" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="vrJ-vE-wkl" secondAttribute="trailing" constant="15" id="7T6-7e-7d0"/>
+                        <constraint firstItem="vrJ-vE-wkl" firstAttribute="leading" secondItem="kWg-Qg-S0e" secondAttribute="leading" constant="15" id="8LK-eO-HmQ"/>
+                        <constraint firstItem="zJ5-uX-7e4" firstAttribute="leading" secondItem="kWg-Qg-S0e" secondAttribute="leading" constant="15" id="IJk-K8-aIl"/>
+                        <constraint firstAttribute="height" constant="200" id="P25-63-r9d"/>
+                        <constraint firstAttribute="trailing" secondItem="zJ5-uX-7e4" secondAttribute="trailing" constant="15" id="Zac-wt-gog"/>
+                        <constraint firstAttribute="trailing" secondItem="DQz-xm-eJc" secondAttribute="trailing" constant="15" id="fgd-UU-4Iw"/>
+                        <constraint firstItem="DQz-xm-eJc" firstAttribute="top" secondItem="vrJ-vE-wkl" secondAttribute="bottom" constant="10" id="hNY-P7-mjy"/>
+                        <constraint firstItem="vrJ-vE-wkl" firstAttribute="top" secondItem="kWg-Qg-S0e" secondAttribute="top" constant="20" id="kBl-fV-vEc"/>
+                        <constraint firstAttribute="bottom" secondItem="zJ5-uX-7e4" secondAttribute="bottom" constant="10" id="nsi-Oy-LDw"/>
+                        <constraint firstItem="DQz-xm-eJc" firstAttribute="leading" secondItem="kWg-Qg-S0e" secondAttribute="leading" constant="15" id="pNd-Kc-y9n"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="kWg-Qg-S0e" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="2g5-Ed-VoF"/>
+                <constraint firstItem="kWg-Qg-S0e" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="lgq-qJ-KnG"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="kWg-Qg-S0e" secondAttribute="trailing" constant="20" id="wuK-om-gbZ"/>
+                <constraint firstItem="kWg-Qg-S0e" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="z6v-sm-gTv"/>
+            </constraints>
+            <point key="canvasLocation" x="141" y="82"/>
+        </view>
+    </objects>
+</document>

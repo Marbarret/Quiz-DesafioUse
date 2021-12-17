@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PontuacaoViewController" customModule="Quiz" customModuleProvider="target">
+            <connections>
+                <outlet property="labelCountAnswer" destination="Udj-AC-oH1" id="Nvj-bx-673"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="viewContent" destination="kKJ-eG-0wW" id="Hn2-wN-odz"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kKJ-eG-0wW">
+                    <rect key="frame" x="20" y="340" width="374" height="216.5"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Resultado Final" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X5Y-B7-7eK">
+                            <rect key="frame" x="15" y="10" width="344" height="27.5"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="23"/>
+                            <color key="textColor" red="0.1215686275" green="0.23137254900000001" blue="0.30196078430000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sua pontuacao foi de" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1cp-bv-mQA">
+                            <rect key="frame" x="15" y="52.5" width="344" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" red="0.1215686275" green="0.23137254900000001" blue="0.30196078430000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5/10" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Udj-AC-oH1">
+                            <rect key="frame" x="164.5" y="103.5" width="45" height="28"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                            <color key="textColor" red="0.1215686275" green="0.23137254900000001" blue="0.30196078430000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vf1-kY-LSK">
+                            <rect key="frame" x="124" y="161.5" width="126" height="30"/>
+                            <state key="normal" title="Tentar Novamente">
+                                <color key="titleColor" systemColor="systemTealColor"/>
+                            </state>
+                            <connections>
+                                <action selector="heandlerButtonRestart:" destination="-1" eventType="touchUpInside" id="3Gg-EP-E59"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.86113081680000003" green="0.99607843139999996" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstItem="1cp-bv-mQA" firstAttribute="top" secondItem="X5Y-B7-7eK" secondAttribute="bottom" constant="15" id="27n-50-IXS"/>
+                        <constraint firstItem="X5Y-B7-7eK" firstAttribute="top" secondItem="kKJ-eG-0wW" secondAttribute="top" constant="10" id="3SA-Iw-f9R"/>
+                        <constraint firstAttribute="trailing" secondItem="X5Y-B7-7eK" secondAttribute="trailing" constant="15" id="ESu-I1-ELp"/>
+                        <constraint firstItem="Vf1-kY-LSK" firstAttribute="top" secondItem="Udj-AC-oH1" secondAttribute="bottom" constant="30" id="Iey-JU-rsB"/>
+                        <constraint firstItem="Udj-AC-oH1" firstAttribute="centerX" secondItem="kKJ-eG-0wW" secondAttribute="centerX" id="Lyv-e8-q1J"/>
+                        <constraint firstItem="Udj-AC-oH1" firstAttribute="top" secondItem="1cp-bv-mQA" secondAttribute="bottom" constant="30" id="Z7C-K5-KZg"/>
+                        <constraint firstItem="Vf1-kY-LSK" firstAttribute="centerX" secondItem="kKJ-eG-0wW" secondAttribute="centerX" id="kB0-to-NBj"/>
+                        <constraint firstAttribute="bottom" secondItem="Vf1-kY-LSK" secondAttribute="bottom" constant="25" id="nCq-Tw-2Jh"/>
+                        <constraint firstAttribute="trailing" secondItem="1cp-bv-mQA" secondAttribute="trailing" constant="15" id="nKg-Un-yuv"/>
+                        <constraint firstItem="X5Y-B7-7eK" firstAttribute="leading" secondItem="kKJ-eG-0wW" secondAttribute="leading" constant="15" id="opi-DX-hYu"/>
+                        <constraint firstItem="1cp-bv-mQA" firstAttribute="leading" secondItem="kKJ-eG-0wW" secondAttribute="leading" constant="15" id="tMc-KN-hn1"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="kKJ-eG-0wW" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="HCp-U6-uCk"/>
+                <constraint firstItem="kKJ-eG-0wW" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="J2b-u6-xY7"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="kKJ-eG-0wW" secondAttribute="trailing" constant="20" id="Kde-JS-Dg9"/>
+            </constraints>
+            <point key="canvasLocation" x="140.57971014492756" y="93.75"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemTealColor">
+            <color red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
